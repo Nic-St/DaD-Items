@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darker DB - Item Database</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border-bottom: 3px solid #ff6b6b;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .stats {
+            font-size: 0.95em;
+            color: #aaa;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #ff6b6b;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .search-filter {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .search-filter input,
+        .search-filter select {
+            padding: 10px 15px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #eee;
+            font-size: 0.95em;
+        }
+
+        .search-filter input::placeholder {
+            color: #888;
+        }
+
+        .search-filter input:focus,
+        .search-filter select:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+        }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .item-card {
+            background: rgba(30, 30, 50, 0.8);
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .item-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #ff8e72);
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff6b6b;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.2);
+        }
+
+        .rarity {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .rarity-poor {
+            background: rgba(128, 128, 128, 0.3);
+            color: #999;
+            border: 1px solid #666;
+        }
+
+        .rarity-common {
+            background: rgba(100, 150, 100, 0.3);
+            color: #90ee90;
+            border: 1px solid #4a7c4e;
+        }
+
+        .rarity-uncommon {
+            background: rgba(70, 130, 180, 0.3);
+            color: #87ceeb;
+            border: 1px solid #4682b4;
+        }
+
+        .rarity-rare {
+            background: rgba(75, 0, 130, 0.3);
+            color: #da70d6;
+            border: 1px solid #663399;
+        }
+
+        .rarity-epic {
+            background: rgba(255, 140, 0, 0.3);
+            color: #ffa500;
+            border: 1px solid #ff8c00;
+        }
+
+        .rarity-legendary {
+            background: rgba(255, 215, 0, 0.3);
+            color: #ffd700;
+            border: 1px solid #daa520;
+        }
+
+        .rarity-unique {
+            background: rgba(220, 20, 60, 0.3);
+            color: #ff6347;
+            border: 1px solid #dc143c;
+        }
+
+        .item-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .item-description {
+            font-size: 0.9em;
+            color: #bbb;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        .item-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+
+        .stat {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px;
+            border-radius: 4px;
+            border-left: 3px solid #ff6b6b;
+        }
+
+        .stat-label {
+            color: #999;
+            font-size: 0.75em;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            color: #fff;
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        .item-type {
+            display: inline-block;
+            background: rgba(255, 107, 107, 0.2);
+            color: #ff9999;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-top: 10px;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .pagination-info {
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            grid-column: 1 / -1;
+        }
+
+        .error-message {
+            background: rgba(255, 107, 107, 0.2);
+            border: 1px solid #ff6b6b;
+            color: #ff9999;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .items-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .search-filter {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚔️ Darker DB - Item Database</h1>
+            <div class="stats">
+                <span id="total-items"><span class="loading-spinner"></span>Loading items...</span>
+            </div>
+        </header>
+
+        <div id="error-container"></div>
+
+        <div class="search-filter">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search items by name..."
+            >
+            <select id="rarity-filter">
+                <option value="">All Rarities</option>
+                <option value="Poor">Poor</option>
+                <option value="Common">Common</option>
+                <option value="Uncommon">Uncommon</option>
+                <option value="Rare">Rare</option>
+                <option value="Epic">Epic</option>
+                <option value="Legendary">Legendary</option>
+                <option value="Unique">Unique</option>
+            </select>
+            <select id="type-filter">
+                <option value="">All Types</option>
+                <option value="Armor">Armor</option>
+                <option value="Weapon">Weapon</option>
+                <option value="Accessory">Accessory</option>
+            </select>
+        </div>
+
+        <div class="items-grid" id="items-container">
+            <div class="no-results"><span class="loading-spinner"></span>Loading items...</div>
+        </div>
+
+        <div class="pagination">
+            <div class="pagination-info" id="pagination-info"></div>
+        </div>
+    </div>
+
+    <script>
+        let allItems = [];
+
+        async function loadItems() {
+            try {
+                // Try to load from data/all_items.json first
+                const response = await fetch('./data/all_items.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: Could not load items file`);
+                }
+
+                allItems = await response.json();
+
+                if (!Array.isArray(allItems) || allItems.length === 0) {
+                    throw new Error('Items data is empty or invalid');
+                }
+
+                document.getElementById('total-items').textContent = 
+                    `Total Items: ${allItems.length}`;
+
+                renderItems(allItems);
+                
+            } catch (error) {
+                console.error('Error loading items:', error);
+                const errorContainer = document.getElementById('error-container');
+                errorContainer.innerHTML = `
+                    <div class="error-message">
+                        <strong>⚠️ Error Loading Data</strong><br>
+                        ${error.message}<br><br>
+                        <small>Make sure the <code>data/all_items.json</code> file exists in the repository.</small>
+                    </div>
+                `;
+                document.getElementById('items-container').innerHTML = 
+                    '<div class="no-results">Unable to load items. Please check the error above.</div>';
+            }
+        }
+
+        function renderItems(items) {
+            const container = document.getElementById('items-container');
+            
+            if (items.length === 0) {
+                container.innerHTML = '<div class="no-results">No items found matching your filters.</div>';
+                return;
+            }
+
+            container.innerHTML = items.map(item => `
+                <div class="item-card">
+                    <div class="rarity rarity-${item.rarity.toLowerCase()}">
+                        ${item.rarity}
+                    </div>
+                    <div class="item-name">${item.name}</div>
+                    <div class="item-description">${item.description || 'No description available'}</div>
+                    
+                    <div class="item-stats">
+                        ${item.gear_score ? `
+                            <div class="stat">
+                                <div class="stat-label">Gear Score</div>
+                                <div class="stat-value">${item.gear_score}</div>
+                            </div>
+                        ` : ''}
+                        ${item.vendor_price ? `
+                            <div class="stat">
+                                <div class="stat-label">Vendor Price</div>
+                                <div class="stat-value">${item.vendor_price}</div>
+                            </div>
+                        ` : ''}
+                        ${item.experience ? `
+                            <div class="stat">
+                                <div class="stat-label">Experience</div>
+                                <div class="stat-value">${item.experience}</div>
+                            </div>
+                        ` : ''}
+                        ${item.armor_rating ? `
+                            <div class="stat">
+                                <div class="stat-label">Armor Rating</div>
+                                <div class="stat-value">${item.armor_rating}</div>
+                            </div>
+                        ` : ''}
+                        ${item.slot_type ? `
+                            <div class="stat">
+                                <div class="stat-label">Slot</div>
+                                <div class="stat-value">${item.slot_type}</div>
+                            </div>
+                        ` : ''}
+                    </div>
+
+                    <span class="item-type">${item.type}</span>
+                </div>
+            `).join('');
+        }
+
+        function filterItems() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const rarityFilter = document.getElementById('rarity-filter').value;
+            const typeFilter = document.getElementById('type-filter').value;
+
+            const filtered = allItems.filter(item => {
+                const matchesSearch = item.name.toLowerCase().includes(searchTerm) ||
+                                    (item.description && item.description.toLowerCase().includes(searchTerm));
+                const matchesRarity = !rarityFilter || item.rarity === rarityFilter;
+                const matchesType = !typeFilter || item.type === typeFilter;
+
+                return matchesSearch && matchesRarity && matchesType;
+            });
+
+            renderItems(filtered);
+        }
+
+        document.getElementById('search-input').addEventListener('input', filterItems);
+        document.getElementById('rarity-filter').addEventListener('change', filterItems);
+        document.getElementById('type-filter').addEventListener('change', filterItems);
+
+        // Load items when page loads
+        loadItems();
+    </script>
+</body>
+</html>
