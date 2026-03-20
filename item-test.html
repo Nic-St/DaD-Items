@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ============================================================
+     DARK AND DARKER — Item Generation Test
+     VERSION: 0.1.0
+     Search: "VERSION" to verify
+     ============================================================ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Item Generation Test</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0d0b08;
+    color: #d4c5a0;
+    font-family: 'Crimson Text', serif;
+    font-size: 1rem;
+    padding: 30px 20px;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.15em;
+    color: #c9a84c;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  #status {
+    text-align: center;
+    color: #6a5a3a;
+    font-style: italic;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+  }
+
+  #controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  button {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    background: transparent;
+    border: 1px solid #4a3a1a;
+    color: #a89060;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  button:hover { border-color: #c9a84c; color: #c9a84c; }
+  button:disabled { opacity: 0.3; cursor: not-allowed; }
+
+  #items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .item-card {
+    background: #161210;
+    border: 1px solid #2a2010;
+    border-top: 3px solid var(--rarity-color);
+    padding: 16px;
+    border-radius: 2px;
+  }
+
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .item-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    color: #fff;
+    line-height: 1.3;
+  }
+
+  .item-rarity {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    padding: 3px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+    margin-left: 8px;
+    color: var(--rarity-color);
+    border: 1px solid var(--rarity-color);
+    opacity: 0.85;
+  }
+
+  .item-slot {
+    font-size: 0.8rem;
+    color: #6a5a3a;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  .item-desc {
+    font-size: 0.82rem;
+    color: #8a7a5a;
+    font-style: italic;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    border-bottom: 1px solid #2a2010;
+    padding-bottom: 10px;
+  }
+
+  .stats-section {
+    margin-top: 8px;
+  }
+
+  .stats-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: #4a3a1a;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    padding: 2px 0;
+    border-bottom: 1px solid #1a1408;
+  }
+
+  .stat-name { color: #a89060; }
+  .stat-value { color: #d4c5a0; font-weight: bold; }
+  .stat-value.positive { color: #90c090; }
+  .stat-value.negative { color: #c07070; }
+
+  .secondary-stats { margin-top: 10px; }
+
+  /* Rarity colours */
+  .rarity-Poor      { --rarity-color: #888; }
+  .rarity-Common    { --rarity-color: #90c090; }
+  .rarity-Uncommon  { --rarity-color: #87ceeb; }
+  .rarity-Rare      { --rarity-color: #c084fc; }
+  .rarity-Epic      { --rarity-color: #ffa500; }
+  .rarity-Legendary { --rarity-color: #ffd700; }
+  .rarity-Unique    { --rarity-color: #ff6347; }
+
+  #log {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    font-size: 0.78rem;
+    color: #4a3a1a;
+    font-style: italic;
+  }
+
+  @media (max-width: 600px) {
+    #items { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Item Generation Test</h1>
+<div id="status">Loading items from API...</div>
+
+<div id="controls">
+  <button id="btn-roll" disabled>Roll 2 Items</button>
+  <button id="btn-roll6" disabled>Roll 6 Items</button>
+  <button id="btn-clear">Clear</button>
+</div>
+
+<div id="items"></div>
+<div id="log"></div>
+
+<script>
+// ── Config ───────────────────────────────────────────────────
+// UPDATE THIS to your GitHub Pages URL
+const DATA_URL = 'https://nic-st.github.io/DaD-Items/data/all_items.json';
+
+const CATEGORY_WEIGHTS = [
+  { type: 'Armor',    weight: 41.37 },
+  { type: 'Weapon',   weight: 47.08 },
+  { type: 'Jewelry',  weight: 11.55 },
+];
+
+const RARITY_WEIGHTS = {
+  Weapon: [
+    { rarity: 'Common',    weight: 4.79  },
+    { rarity: 'Uncommon',  weight: 23.24 },
+    { rarity: 'Rare',      weight: 13.94 },
+    { rarity: 'Epic',      weight: 4.65  },
+    { rarity: 'Legendary', weight: 0.46  },
+  ],
+  Armor: [
+    { rarity: 'Common',    weight: 4.21  },
+    { rarity: 'Uncommon',  weight: 20.42 },
+    { rarity: 'Rare',      weight: 12.25 },
+    { rarity: 'Epic',      weight: 4.08  },
+    { rarity: 'Legendary', weight: 0.41  },
+  ],
+  Jewelry: [
+    { rarity: 'Uncommon',  weight: 6.34  },
+    { rarity: 'Rare',      weight: 3.80  },
+    { rarity: 'Epic',      weight: 1.27  },
+    { rarity: 'Legendary', weight: 0.13  },
+  ],
+};
+
+// ── State ────────────────────────────────────────────────────
+let allItems = [];
+
+// ── Helpers ──────────────────────────────────────────────────
+function weightedPick(options) {
+  const total = options.reduce((s, o) => s + o.weight, 0);
+  let r = Math.random() * total;
+  for (const o of options) { r -= o.weight; if (r <= 0) return o; }
+  return options[options.length - 1];
+}
+
+function rollBetween(min, max) {
+  if (min === max) return min;
+  return Math.round((Math.random() * (max - min) + min) * 10) / 10;
+}
+
+function getPrimaryStats(item) {
+  const stats = {};
+  for (const key of Object.keys(item)) {
+    if (!key.startsWith('primary_min_')) continue;
+    const statName = key.slice('primary_min_'.length);
+    const min = item[`primary_min_${statName}`];
+    const max = item[`primary_max_${statName}`];
+    if (min === null) continue;
+    stats[statName] = rollBetween(min, max);
+  }
+  return stats;
+}
+
+function getSecondaryStats(item, count) {
+  const pool = [];
+  for (const key of Object.keys(item)) {
+    if (!key.startsWith('secondary_min_')) continue;
+    if (key.includes('enchanted')) continue;
+    const statName = key.slice('secondary_min_'.length);
+    const min = item[`secondary_min_${statName}`];
+    const max = item[`secondary_max_${statName}`];
+    if (min === null) continue;
+    pool.push({ statName, min, max });
+  }
+  const picked = pool.sort(() => Math.random() - 0.5).slice(0, count);
+  const stats = {};
+  for (const s of picked) stats[s.statName] = rollBetween(s.min, s.max);
+  return stats;
+}
+
+function generateItem() {
+  const category = weightedPick(CATEGORY_WEIGHTS).type;
+  const rarity   = weightedPick(RARITY_WEIGHTS[category]).rarity;
+  const pool     = allItems.filter(i => i.type === category && i.rarity === rarity);
+
+  if (pool.length === 0) {
+    log(`⚠ No items found for ${category} / ${rarity}`);
+    return null;
+  }
+
+  const base           = pool[Math.floor(Math.random() * pool.length)];
+  const primaryStats   = getPrimaryStats(base);
+  const numSecondary   = base.num_secondary_attributes || 0;
+  const secondaryStats = numSecondary > 0 ? getSecondaryStats(base, numSecondary) : {};
+
+  return { base, rarity, category, primaryStats, secondaryStats, numSecondary };
+}
+
+// ── Rendering ────────────────────────────────────────────────
+function formatStatName(key) {
+  return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function renderItem(item) {
+  if (!item) return;
+  const { base, rarity, primaryStats, secondaryStats } = item;
+
+  const primaryRows = Object.entries(primaryStats).map(([k, v]) => {
+    const cls = v > 0 ? 'positive' : v < 0 ? 'negative' : '';
+    return `<div class="stat-row">
+      <span class="stat-name">${formatStatName(k)}</span>
+      <span class="stat-value ${cls}">${v > 0 ? '+' : ''}${v}</span>
+    </div>`;
+  }).join('');
+
+  const secondaryRows = Object.entries(secondaryStats).map(([k, v]) => {
+    const cls = v > 0 ? 'positive' : v < 0 ? 'negative' : '';
+    return `<div class="stat-row">
+      <span class="stat-name">${formatStatName(k)}</span>
+      <span class="stat-value ${cls}">${v > 0 ? '+' : ''}${v}</span>
+    </div>`;
+  }).join('');
+
+  const card = document.createElement('div');
+  card.className = `item-card rarity-${rarity}`;
+  card.innerHTML = `
+    <div class="item-header">
+      <div class="item-name">${base.name}</div>
+      <div class="item-rarity">${rarity}</div>
+    </div>
+    <div class="item-slot">${base.slot_type || base.type}${base.armor_type ? ' · ' + base.armor_type : ''}</div>
+    ${base.description ? `<div class="item-desc">${base.description}</div>` : ''}
+    <div class="stats-section">
+      ${primaryRows ? `<div class="stats-label">Primary</div>${primaryRows}` : ''}
+      ${secondaryRows ? `<div class="secondary-stats"><div class="stats-label">Secondary (${item.numSecondary} rolled)</div>${secondaryRows}</div>` : ''}
+    </div>
+  `;
+  document.getElementById('items').prepend(card);
+}
+
+function log(msg) {
+  const el = document.getElementById('log');
+  el.textContent += msg + '\n';
+}
+
+// ── Init ─────────────────────────────────────────────────────
+async function init() {
+  const status = document.getElementById('status');
+  try {
+    status.textContent = 'Fetching all_items.json...';
+    const res = await fetch(DATA_URL);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    allItems = await res.json();
+    status.textContent = `✓ Loaded ${allItems.length} items — ready to roll`;
+    document.getElementById('btn-roll').disabled  = false;
+    document.getElementById('btn-roll6').disabled = false;
+  } catch (e) {
+    status.textContent = `✗ Failed to load items: ${e.message}`;
+    log('Check that DATA_URL is correct and GitHub Pages is enabled for this repo.');
+  }
+}
+
+document.getElementById('btn-roll').addEventListener('click', () => {
+  for (let i = 0; i < 2; i++) renderItem(generateItem());
+});
+document.getElementById('btn-roll6').addEventListener('click', () => {
+  for (let i = 0; i < 6; i++) renderItem(generateItem());
+});
+document.getElementById('btn-clear').addEventListener('click', () => {
+  document.getElementById('items').innerHTML = '';
+  document.getElementById('log').textContent = '';
+});
+
+init();
+</script>
+</body>
+</html>
