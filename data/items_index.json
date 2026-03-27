@@ -1239,6 +1239,14 @@
     "gear_score": 25,
     "vendor_price": 20
   },
+  "BlazingTail": {
+    "name": "Blazing Tail",
+    "rarity": "Rare",
+    "type": "Misc",
+    "description": "A tail severed by a fire lizard in a moment of peril. The heat of its flames still lingers, and it writhes as if it were still alive.",
+    "gear_score": null,
+    "vendor_price": null
+  },
   "BlemishedPearl": {
     "name": "Blemished Pearl",
     "rarity": "Uncommon",
@@ -2559,6 +2567,14 @@
     "gear_score": 12,
     "vendor_price": 25
   },
+  "CharredFang": {
+    "name": "Charred Fang",
+    "rarity": "Common",
+    "type": "Misc",
+    "description": "It is a blackened fang taken from a Fire Hound. More robust than the teeth of ordinary beasts, it retains its sharpness even under intense heat.",
+    "gear_score": null,
+    "vendor_price": null
+  },
   "ChocolateChipMuffin": {
     "name": "Chocolate Chip Muffin",
     "rarity": "Epic",
@@ -3111,6 +3127,14 @@
     "gear_score": null,
     "vendor_price": 12
   },
+  "CoreofCinder": {
+    "name": "Core of Cinder",
+    "rarity": "Rare",
+    "type": "Misc",
+    "description": "A core left behind after a fire elemental’s death. Ash formed as its form burned during the moment of dissolution clings to it.",
+    "gear_score": null,
+    "vendor_price": null
+  },
   "CorruptedHeart": {
     "name": "Corrupted Heart",
     "rarity": "Unique",
@@ -3190,6 +3214,14 @@
     "description": "A large damaged log cut from a tree.",
     "gear_score": null,
     "vendor_price": 150
+  },
+  "CrackedTusk": {
+    "name": "Cracked Tusk",
+    "rarity": "Common",
+    "type": "Misc",
+    "description": "A flame boar’s tusk. Unable to withstand the intense heat, its surface is cracked in several places.",
+    "gear_score": null,
+    "vendor_price": null
   },
   "CrimsonThreadSpool": {
     "name": "Crimson Thread Spool",
@@ -5271,6 +5303,14 @@
     "gear_score": 70,
     "vendor_price": 90
   },
+  "FlickeringEmber": {
+    "name": "Flickering Ember",
+    "rarity": "Uncommon",
+    "type": "Misc",
+    "description": "A small ember left behind by a fire spirit. It does not easily go out and faint whispers can be heard if you listen closely.",
+    "gear_score": null,
+    "vendor_price": null
+  },
   "Flute_1001": {
     "name": "Flute",
     "rarity": "Poor",
@@ -5894,6 +5934,14 @@
     "description": "An exquisite creation fashioned from Froststone Powder, combining the chilling power of the frozen abyss with arcane elegance.",
     "gear_score": 50,
     "vendor_price": 160
+  },
+  "FrozenClaw": {
+    "name": "Frozen Claw",
+    "rarity": "Uncommon",
+    "type": "Misc",
+    "description": "A claw that fell from an Ice Hound. Though its tip is slightly chipped from the aftermath of a fierce struggle, a lingering chill still clings to it.",
+    "gear_score": null,
+    "vendor_price": null
   },
   "FrozenHeart": {
     "name": "Frozen Heart",
@@ -7975,6 +8023,14 @@
     "gear_score": null,
     "vendor_price": 48
   },
+  "HardenedShellFragment": {
+    "name": "Hardened Shell Fragment",
+    "rarity": "Common",
+    "type": "Misc",
+    "description": "A fragment of a lava turtle’s shell with a rugged uneven surface. It is as hard as aged stone and remarkably heavy for its size.",
+    "gear_score": null,
+    "vendor_price": null
+  },
   "Hatchet_1001": {
     "name": "Hatchet",
     "rarity": "Poor",
@@ -9479,6 +9535,14 @@
     "gear_score": null,
     "vendor_price": 1050
   },
+  "LavaGolemShoulderFragment": {
+    "name": "Lava Golem Shoulder Fragment",
+    "rarity": "Rare",
+    "type": "Misc",
+    "description": "It is a massive stone fragment that fell from a lava golem’s shoulder. It is far heavier than it appears, requiring considerable strength to move.",
+    "gear_score": null,
+    "vendor_price": null
+  },
   "LavaMushroom_1001": {
     "name": "Lava Mushroom",
     "rarity": "Poor",
@@ -10695,6 +10759,14 @@
     "gear_score": 20,
     "vendor_price": 30
   },
+  "MagmaEssence": {
+    "name": "Magma Essence",
+    "rarity": "Common",
+    "type": "Misc",
+    "description": "An essence obtained from lava slimes. It takes the form of a thick liquid and bubbles with heat like magma.",
+    "gear_score": null,
+    "vendor_price": null
+  },
   "ManaSphere_5001": {
     "name": "Mana Sphere",
     "rarity": "Epic",
@@ -10766,6 +10838,14 @@
     "description": "A mix of soft padding for comfort, leather for movability and plate armor for added protection.",
     "gear_score": 50,
     "vendor_price": 180
+  },
+  "MeltedPickaxeHead": {
+    "name": "Melted Pickaxe Head",
+    "rarity": "Uncommon",
+    "type": "Misc",
+    "description": "A pickaxe head warped by extreme heat. The handle is gone and only the partially melted head remains.",
+    "gear_score": null,
+    "vendor_price": null
   },
   "MercurialCloak_1001": {
     "name": "Mercurial Cloak",
@@ -14975,6 +15055,14 @@
     "gear_score": null,
     "vendor_price": 50
   },
+  "SearedHide": {
+    "name": "Seared Hide",
+    "rarity": "Common",
+    "type": "Misc",
+    "description": "A hide stripped from a back where flames once surged. Its fire-scorched surface is extremely rough and hardened, making it resistant to intense heat.",
+    "gear_score": null,
+    "vendor_price": null
+  },
   "Seashell": {
     "name": "Seashell",
     "rarity": "Uncommon",
@@ -15462,6 +15550,14 @@
     "description": "Made from animal fat and ash. It doesn't smell pleasant, but it still gets the job done.",
     "gear_score": null,
     "vendor_price": 12
+  },
+  "SootyBeardHair": {
+    "name": "Sooty Beard Hair",
+    "rarity": "Common",
+    "type": "Misc",
+    "description": "A dwarf’s beard, dirtied and tangled with soot. Wire-stiff to the touch with a heavy smell of metal clinging to it.",
+    "gear_score": null,
+    "vendor_price": null
   },
   "SoulHeart": {
     "name": "Soul Heart",
@@ -16343,6 +16439,14 @@
     "gear_score": null,
     "vendor_price": 100
   },
+  "SulfurSaliva": {
+    "name": "Sulfur Saliva",
+    "rarity": "Uncommon",
+    "type": "Misc",
+    "description": "It is a sticky saliva that gives off a strong sulfurous odor. Highly flammable, it can easily catch fire and should be handled with care.",
+    "gear_score": null,
+    "vendor_price": null
+  },
   "SunburstOrb_1001": {
     "name": "Sunburst Orb",
     "rarity": "Poor",
@@ -16662,6 +16766,14 @@
     "description": "A cloak worn out after many adventures, but familiar to the body.",
     "gear_score": 50,
     "vendor_price": 180
+  },
+  "TearoftheVolcano": {
+    "name": "Tear of the Volcano",
+    "rarity": "Legendary",
+    "type": "Misc",
+    "description": "A gemstone formed when the hottest magma that once drove the colossus’s heart crystallized. It holds pure fire energy.",
+    "gear_score": null,
+    "vendor_price": null
   },
   "Telescope": {
     "name": "Telescope",
@@ -18239,6 +18351,14 @@
     "gear_score": null,
     "vendor_price": 300
   },
+  "WarpedAdamantineShackles": {
+    "name": "Warped Adamantine Shackles",
+    "rarity": "Epic",
+    "type": "Misc",
+    "description": "A massive chain link once forged by the ancient dwarves to bind the colossus. After the seal was broken, it was grotesquely warped by the colossus’s wrath.",
+    "gear_score": null,
+    "vendor_price": null
+  },
   "WatchmanCloak_1001": {
     "name": "Watchman Cloak",
     "rarity": "Poor",
@@ -18830,6 +18950,118 @@
     "description": "A practical cap easily found by anyone. Knitted from wool, it is not thick but offers minimal warmth.",
     "gear_score": 50,
     "vendor_price": 120
+  },
+  "WorkshopRemnant_1001": {
+    "name": "Remnants",
+    "rarity": "Poor",
+    "type": "Misc",
+    "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopRemnant_2001": {
+    "name": "Remnants",
+    "rarity": "Common",
+    "type": "Misc",
+    "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopRemnant_3001": {
+    "name": "Remnants",
+    "rarity": "Uncommon",
+    "type": "Misc",
+    "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopRemnant_4001": {
+    "name": "Remnants",
+    "rarity": "Rare",
+    "type": "Misc",
+    "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopRemnant_5001": {
+    "name": "Remnants",
+    "rarity": "Epic",
+    "type": "Misc",
+    "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopRemnant_6001": {
+    "name": "Remnants",
+    "rarity": "Legendary",
+    "type": "Misc",
+    "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopRemnant_7001": {
+    "name": "Remnants",
+    "rarity": "Unique",
+    "type": "Misc",
+    "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopScraps_1001": {
+    "name": "Scraps",
+    "rarity": "Poor",
+    "type": "Misc",
+    "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopScraps_2001": {
+    "name": "Scraps",
+    "rarity": "Common",
+    "type": "Misc",
+    "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopScraps_3001": {
+    "name": "Scraps",
+    "rarity": "Uncommon",
+    "type": "Misc",
+    "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopScraps_4001": {
+    "name": "Scraps",
+    "rarity": "Rare",
+    "type": "Misc",
+    "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopScraps_5001": {
+    "name": "Scraps",
+    "rarity": "Epic",
+    "type": "Misc",
+    "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopScraps_6001": {
+    "name": "Scraps",
+    "rarity": "Legendary",
+    "type": "Misc",
+    "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
+  },
+  "WorkshopScraps_7001": {
+    "name": "Scraps",
+    "rarity": "Unique",
+    "type": "Misc",
+    "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
+    "gear_score": null,
+    "vendor_price": null
   },
   "WovenRattanBottle": {
     "name": "Woven Rattan Bottle",
