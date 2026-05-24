@@ -1,10 +1,10 @@
 {
-  "Poor": 268,
-  "Common": 304,
-  "Uncommon": 376,
-  "Rare": 375,
-  "Epic": 463,
-  "Legendary": 278,
-  "Unique": 306,
-  "Artifact": 25
+  "Poor": 49,
+  "Common": 58,
+  "Uncommon": 87,
+  "Rare": 86,
+  "Epic": 64,
+  "Legendary": 48,
+  "Unique": 53,
+  "Artifact": 5
 }
