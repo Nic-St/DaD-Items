@@ -733,7 +733,7 @@
     "type": "Misc",
     "description": "A heavy iron ball that carries lethal destruction.",
     "gear_score": null,
-    "vendor_price": 5
+    "vendor_price": 0
   },
   "Bandage_1001": {
     "name": "Bandage",
@@ -1071,6 +1071,14 @@
     "gear_score": 130,
     "vendor_price": 1000
   },
+  "BattleWornArmorFragment": {
+    "name": "Battle-Worn Armor Fragment",
+    "rarity": "Epic",
+    "type": "Misc",
+    "description": "A thick iron plate that once covered the Hell Hunter's massive frame. Dented and scratched across every surface, each mark a testament to the countless battles it has weathered.",
+    "gear_score": null,
+    "vendor_price": 142
+  },
   "Bavin": {
     "name": "Bavin",
     "rarity": "Uncommon",
@@ -1245,7 +1253,7 @@
     "type": "Misc",
     "description": "A tail severed by a fire lizard in a moment of peril. The heat of its flames still lingers, and it writhes as if it were still alive.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 120
   },
   "BlemishedPearl": {
     "name": "Blemished Pearl",
@@ -1614,6 +1622,14 @@
     "description": "Well-worn fibers that has witnessed countless arrows fly.",
     "gear_score": null,
     "vendor_price": 5
+  },
+  "BrandoftheSubservient": {
+    "name": "Brand of the Subservient",
+    "rarity": "Uncommon",
+    "type": "Misc",
+    "description": "A circular leather medallion engraved with a sigil to bind a Fiendling. This brand enforces absolute obedience to a superior demon and cannot be removed as long as its wearer still lives.",
+    "gear_score": null,
+    "vendor_price": 42
   },
   "BraveHunterPants_4001": {
     "name": "Brave Hunter's Pants",
@@ -2573,7 +2589,7 @@
     "type": "Misc",
     "description": "It is a blackened fang taken from a Fire Hound. More robust than the teeth of ordinary beasts, it retains its sharpness even under intense heat.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 25
   },
   "ChocolateChipMuffin": {
     "name": "Chocolate Chip Muffin",
@@ -3133,7 +3149,7 @@
     "type": "Misc",
     "description": "A core left behind after a fire elemental’s death. Ash formed as its form burned during the moment of dissolution clings to it.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 100
   },
   "CorruptedHeart": {
     "name": "Corrupted Heart",
@@ -3221,7 +3237,7 @@
     "type": "Misc",
     "description": "A flame boar’s tusk. Unable to withstand the intense heat, its surface is cracked in several places.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 25
   },
   "CrimsonThreadSpool": {
     "name": "Crimson Thread Spool",
@@ -4295,6 +4311,14 @@
     "gear_score": 40,
     "vendor_price": 30
   },
+  "DemonWingMembrane": {
+    "name": "Demon Wing Membrane",
+    "rarity": "Uncommon",
+    "type": "Misc",
+    "description": "The remains of a wing once used to drift through the air. Despite its thin and stretched form, it is surprisingly tough.",
+    "gear_score": null,
+    "vendor_price": 29
+  },
   "DemoncladLeggings_4001": {
     "name": "Demonclad Leggings",
     "rarity": "Rare",
@@ -4879,6 +4903,14 @@
     "gear_score": null,
     "vendor_price": 48
   },
+  "EnchantedEye": {
+    "name": "Enchanted Eye",
+    "rarity": "Rare",
+    "type": "Misc",
+    "description": "An eye specialized for observing enemies from great distances. Even after its owner's death, the mana condensed within keeps it glowing faintly in the dark.",
+    "gear_score": null,
+    "vendor_price": 38
+  },
   "EtchedWandFragment": {
     "name": "Etched Wand Fragment",
     "rarity": "Rare",
@@ -5309,7 +5341,7 @@
     "type": "Misc",
     "description": "A small ember left behind by a fire spirit. It does not easily go out and faint whispers can be heard if you listen closely.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 48
   },
   "Flute_1001": {
     "name": "Flute",
@@ -5941,7 +5973,7 @@
     "type": "Misc",
     "description": "A claw that fell from an Ice Hound. Though its tip is slightly chipped from the aftermath of a fierce struggle, a lingering chill still clings to it.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 54
   },
   "FrozenHeart": {
     "name": "Frozen Heart",
@@ -7505,7 +7537,7 @@
   },
   "GoldenArmet_5001": {
     "name": "Golden Armet",
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "type": "Armor",
     "description": "Molded from gold with movable face and cheek armor, fully protecting the head from blows.",
     "gear_score": 50,
@@ -7529,7 +7561,7 @@
   },
   "GoldenCloak_5001": {
     "name": "Golden Cloak",
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "type": "Armor",
     "description": "Crafted from fine golden fibers, this luxurious cloak is a mark of high status.",
     "gear_score": 50,
@@ -7553,7 +7585,7 @@
   },
   "GoldenGjermundbu_5001": {
     "name": "Golden Gjermundbu",
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "type": "Armor",
     "description": "Reinforced with gold that covers most of the head and face, transitioning to flexible golden chainmail.",
     "gear_score": 50,
@@ -7569,7 +7601,7 @@
   },
   "GoldenHounskull_5001": {
     "name": "Golden Hounskull",
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "type": "Armor",
     "description": "A gold helmet that provides extensive protection for the face.",
     "gear_score": 50,
@@ -7585,7 +7617,7 @@
   },
   "GoldenLeafHood_5001": {
     "name": "Golden Leaf Hood",
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "type": "Armor",
     "description": "Crafted with golden fabrics helping you blend into your environment with ease.",
     "gear_score": 50,
@@ -7601,7 +7633,7 @@
   },
   "GoldenPaddedTunic_5001": {
     "name": "Golden Padded Tunic",
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "type": "Armor",
     "description": "Made from quilting golden materials, offering flexible soft armor that allows for mobility with ease.",
     "gear_score": 50,
@@ -7625,7 +7657,7 @@
   },
   "GoldenPlate_5001": {
     "name": "Golden Plate",
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "type": "Armor",
     "description": "Golden Plate armor, extremely strong however, uncomfortable to wear and quite heavy.",
     "gear_score": 50,
@@ -7633,7 +7665,7 @@
   },
   "GoldenRobe_5001": {
     "name": "Golden Robe",
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "type": "Armor",
     "description": "A bewitching garment crafted using materials derived from gold that weaves together style and sorcery.",
     "gear_score": 50,
@@ -7641,7 +7673,7 @@
   },
   "GoldenScarf_5001": {
     "name": "Golden Scarf",
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "type": "Armor",
     "description": "A facemask woven using golden materials, making the wearer appear mysterious.",
     "gear_score": 50,
@@ -8029,7 +8061,7 @@
     "type": "Misc",
     "description": "A fragment of a lava turtle’s shell with a rugged uneven surface. It is as hard as aged stone and remarkably heavy for its size.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 55
   },
   "Hatchet_1001": {
     "name": "Hatchet",
@@ -8439,6 +8471,14 @@
     "gear_score": 50,
     "vendor_price": 180
   },
+  "HellHuntersCurvedBlade": {
+    "name": "Hell Hunter's Curved Blade",
+    "rarity": "Rare",
+    "type": "Misc",
+    "description": "A massive blade darkened by the blood of countless prey soaked in over the years. The edge is rather dull, but its sheer weight alone is enough to crush bone.",
+    "gear_score": null,
+    "vendor_price": 103
+  },
   "Hemostatic_1001": {
     "name": "Hemostatic",
     "rarity": "Poor",
@@ -8791,6 +8831,14 @@
     "gear_score": null,
     "vendor_price": 25
   },
+  "HuntressWitnessEmblem": {
+    "name": "Huntress' Witness Emblem",
+    "rarity": "Unique",
+    "type": "Misc",
+    "description": "An emblem bestowed upon those who have carried out the Huntress's many assignments, great and small. Glowing softly with a mysterious violet light, this emblem commemorates the adventurer's storied journey.",
+    "gear_score": null,
+    "vendor_price": 0
+  },
   "Icefang_5001": {
     "name": "Icefang",
     "rarity": "Epic",
@@ -8837,7 +8885,7 @@
     "type": "Misc",
     "description": "A small wooden figurine delicately carved by hand. The sculptor's artistic spirit can still be felt.",
     "gear_score": null,
-    "vendor_price": 50
+    "vendor_price": 5000
   },
   "InvisibilityPotion_1001": {
     "name": "Potion of Invisibility",
@@ -9541,7 +9589,7 @@
     "type": "Misc",
     "description": "It is a massive stone fragment that fell from a lava golem’s shoulder. It is far heavier than it appears, requiring considerable strength to move.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 120
   },
   "LavaMushroom_1001": {
     "name": "Lava Mushroom",
@@ -10765,7 +10813,7 @@
     "type": "Misc",
     "description": "An essence obtained from lava slimes. It takes the form of a thick liquid and bubbles with heat like magma.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 28
   },
   "ManaSphere_5001": {
     "name": "Mana Sphere",
@@ -10845,7 +10893,7 @@
     "type": "Misc",
     "description": "A pickaxe head warped by extreme heat. The handle is gone and only the partially melted head remains.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 45
   },
   "MercurialCloak_1001": {
     "name": "Mercurial Cloak",
@@ -10990,6 +11038,14 @@
     "description": "The jagged incisor of a mimic, a twisted reminder of its ability to transform and ensnare unsuspecting adventurers.",
     "gear_score": null,
     "vendor_price": 10
+  },
+  "MisshapenBladeShard": {
+    "name": "Misshapen Blade Shard",
+    "rarity": "Rare",
+    "type": "Misc",
+    "description": "A shard of the blade formed from the grotesque mutation of a Demon Executioner's arm. Its surface resembles organic tissue at first glance, yet its hardness surpasses that of most ores.",
+    "gear_score": null,
+    "vendor_price": 87
   },
   "Mitre_1001": {
     "name": "Mitre",
@@ -11503,6 +11559,102 @@
     "gear_score": 50,
     "vendor_price": 180
   },
+  "ObsidianArcaneHood_5001": {
+    "name": "Obsidian Arcane Hood",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "A hood woven from the finest silk infused with obsidian powder. Dark violet like a piece of the night itself, the soft fabric conceals an unexpected resilience.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianBardiche_5001": {
+    "name": "Obsidian Bardiche",
+    "rarity": "Epic",
+    "type": "Weapon",
+    "description": "A massive bardiche with a deep purple hue. Its obsidian-forged blade resists dulling, maintaining consistent striking power.",
+    "gear_score": 50,
+    "vendor_price": 160
+  },
+  "ObsidianBloodwovenGloves_5001": {
+    "name": "Obsidian Bloodwoven Gloves",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Sturdy leather gloves dyed with beast blood and obsidian powder, bearing a deep violet hue and a calm, subtle sheen.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianBloodwovenRobe_5001": {
+    "name": "Obsidian Bloodwoven Robe",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "A robe finished with thread dyed in beast blood and obsidian powder. The deep violet that envelops the body lends it an air of dark luxury.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianChampionArmor_5001": {
+    "name": "Obsidian Champion Armor",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Smelted from obsidian ore, this armor boasts exceptional durability and holds firm against the harshest of blows.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianChapelDeFer_5001": {
+    "name": "Obsidian Chapel De Fer",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "A wide-brimmed helmet forged from obsidian ore. Its refined violet surface is smooth yet unyielding.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianCloak_5001": {
+    "name": "Obsidian Cloak",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Infused with obsidian powder, this cloak bears a deep violet hue, its rich sheen revealed with grace when caught in the light.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianClothPants_5001": {
+    "name": "Obsidian Cloth Pants",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Trousers made from plain cloth infused with obsidian powder. Light and comfortable, though offering little protection against impact.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianCutlass_5001": {
+    "name": "Obsidian Cutlass",
+    "rarity": "Epic",
+    "type": "Weapon",
+    "description": "An obsidian-forged cutlass. Its deep violet blade is finely honed, easily severing enemy flesh.",
+    "gear_score": 40,
+    "vendor_price": 160
+  },
+  "ObsidianDarkPlateArmor_5001": {
+    "name": "Obsidian Dark Plate Armor",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "A plate armor forged from obsidian ore, smelted into thin panels and fitted together. Exceptionally sturdy, its polished surface carries the subtle sheen unique to obsidian.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianDarkleafBoots_5001": {
+    "name": "Obsidian Darkleaf Boots",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Boots refined to a craftsman's standard and enhanced with obsidian powder. Flexible in fit, yet dependably durable.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianHeavyGauntlet_5001": {
+    "name": "Obsidian Heavy Gauntlets",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Gauntlets forged from thin obsidian steel plates. Smooth and unyielding, they offer steady protection for the hands.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
   "ObsidianIngots_5001": {
     "name": "Obsidian Ingot",
     "rarity": "Epic",
@@ -11510,6 +11662,38 @@
     "description": "A highly enriched ingot of pure obsidian.",
     "gear_score": null,
     "vendor_price": 125
+  },
+  "ObsidianLeatherGloves_5001": {
+    "name": "Obsidian Leather Gloves",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Basic leather gloves dyed with obsidian powder. Thick and sturdy, with a smooth, even surface.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianMorningStar_5001": {
+    "name": "Obsidian Morningstar",
+    "rarity": "Epic",
+    "type": "Weapon",
+    "description": "A morningstar forged from obsidian ore. While maintaining its heavy form, the tips of its spikes are honed sharper to concentrate its impact.",
+    "gear_score": 40,
+    "vendor_price": 160
+  },
+  "ObsidianNorthernFullTunic_5001": {
+    "name": "Obsidian Northern Full Tunic",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "A soft tunic layered with chainmail of woven obsidian ore. It fits naturally against the body, offering comfort without sacrificing protection.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianOnyxGloves_5001": {
+    "name": "Obsidian Onyx Gloves",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Leather gloves tinted deep violet with obsidian powder. They wrap naturally around the hands, feeling almost as though nothing is worn at all.",
+    "gear_score": 30,
+    "vendor_price": 160
   },
   "ObsidianOres_5001": {
     "name": "Obsidian Ore",
@@ -11519,6 +11703,30 @@
     "gear_score": null,
     "vendor_price": 125
   },
+  "ObsidianPaddedLeggings_5001": {
+    "name": "Obsidian Padded Leggings",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Leggings crafted with obsidian powder. They can withstand light blows, but won't hold up for long.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianPlateBoots_5001": {
+    "name": "Obsidian Plate Boots",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Boots forged from smelted obsidian. Their surfaces gleam like glass, yet offer exceptional protection for the feet.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianPlatePants_5001": {
+    "name": "Obsidian Plate Pants",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "This obsidian plate leg armor shimmers with a subtle violet glow, its smooth exterior belying a formidable defense.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
   "ObsidianPowder_5001": {
     "name": "Obsidian Powder",
     "rarity": "Epic",
@@ -11526,6 +11734,70 @@
     "description": "Powder made by finely grinding obsidian ore.",
     "gear_score": null,
     "vendor_price": 125
+  },
+  "ObsidianShadowMask_5001": {
+    "name": "Obsidian Shadow Mask",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "A mask crafted from cloth woven with obsidian powder. The deep violet fabric veils the face, lending an air of dark mystery.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianStefanBeret_5001": {
+    "name": "Obsidian Stefan Beret",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "A decorative hat finely embroidered with obsidian powder-infused thread. Delicate violet stitching and feather trim lend it a refined charm.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianStilettoDagger_5001": {
+    "name": "Obsidian Stiletto Dagger",
+    "rarity": "Epic",
+    "type": "Weapon",
+    "description": "An obsidian stiletto dagger, carefully knapped to create a fine edge. Its slender blade is so sharp it seems capable of slicing flesh with the slightest touch.",
+    "gear_score": 40,
+    "vendor_price": 160
+  },
+  "ObsidianTrapperHat_5001": {
+    "name": "Obsidian Trapper Hat",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "A hunter's hat crafted from thick leather infused with obsidian powder. Built to endure, it holds its shape through long hours in the field and keeps your head well protected.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianTurnshoe_5001": {
+    "name": "Obsidian Turnshoe",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Shoes crafted from fine cowhide infused with obsidian powder. A deep, subtle sheen lingers across their polished surface.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianWandererAttire_5001": {
+    "name": "Obsidian Wanderer Attire",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Worn and tattered, this obsidian powder-infused garment still carries a faint violet sheen across its surface.",
+    "gear_score": 30,
+    "vendor_price": 160
+  },
+  "ObsidianWarHammer_5001": {
+    "name": "Obsidian War Hammer",
+    "rarity": "Epic",
+    "type": "Weapon",
+    "description": "A war hammer forged from obsidian. Its protrusions, each shaped differently, bear a deep violet hue and are smoothly refined to efficiently deliver impact.",
+    "gear_score": 40,
+    "vendor_price": 160
+  },
+  "ObsidianWizardShoes_5001": {
+    "name": "Obsidian Wizard Shoes",
+    "rarity": "Epic",
+    "type": "Armor",
+    "description": "Shoes crafted from soft leather infused with obsidian powder. They conform naturally to the feet, allowing for easy, comfortable movement.",
+    "gear_score": 30,
+    "vendor_price": 160
   },
   "OccultistBoots_1001": {
     "name": "Occultist Boots",
@@ -15055,13 +15327,21 @@
     "gear_score": null,
     "vendor_price": 50
   },
+  "SealofDominion": {
+    "name": "Seal of Dominion",
+    "rarity": "Legendary",
+    "type": "Misc",
+    "description": "A magical sigil used by a Demon Overseer to dominate lesser demons. Inscribed with indecipherable text of the inferno, its mere presence inflicts an oppressive, crushing weight upon the soul.",
+    "gear_score": null,
+    "vendor_price": 1000
+  },
   "SearedHide": {
     "name": "Seared Hide",
     "rarity": "Common",
     "type": "Misc",
     "description": "A hide stripped from a back where flames once surged. Its fire-scorched surface is extremely rough and hardened, making it resistant to intense heat.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 30
   },
   "Seashell": {
     "name": "Seashell",
@@ -15474,7 +15754,7 @@
   "Sling_1001": {
     "name": "Sling",
     "rarity": "Poor",
-    "type": "Weapon",
+    "type": "Utility",
     "description": "A weapon that hurls stones from a small pouch strung between leather cords. Simple in design, yet difficult to master without skill.",
     "gear_score": 1,
     "vendor_price": 0
@@ -15482,7 +15762,7 @@
   "Sling_2001": {
     "name": "Sling",
     "rarity": "Common",
-    "type": "Weapon",
+    "type": "Utility",
     "description": "A weapon that hurls stones from a small pouch strung between leather cords. Simple in design, yet difficult to master without skill.",
     "gear_score": 5,
     "vendor_price": 3
@@ -15490,7 +15770,7 @@
   "Sling_3001": {
     "name": "Sling",
     "rarity": "Uncommon",
-    "type": "Weapon",
+    "type": "Utility",
     "description": "A weapon that hurls stones from a small pouch strung between leather cords. Simple in design, yet difficult to master without skill.",
     "gear_score": 25,
     "vendor_price": 4
@@ -15498,7 +15778,7 @@
   "Sling_4001": {
     "name": "Sling",
     "rarity": "Rare",
-    "type": "Weapon",
+    "type": "Utility",
     "description": "A weapon that hurls stones from a small pouch strung between leather cords. Simple in design, yet difficult to master without skill.",
     "gear_score": 40,
     "vendor_price": 7
@@ -15506,7 +15786,7 @@
   "Sling_5001": {
     "name": "Sling",
     "rarity": "Epic",
-    "type": "Weapon",
+    "type": "Utility",
     "description": "A weapon that hurls stones from a small pouch strung between leather cords. Simple in design, yet difficult to master without skill.",
     "gear_score": 50,
     "vendor_price": 11
@@ -15514,7 +15794,7 @@
   "Sling_6001": {
     "name": "Sling",
     "rarity": "Legendary",
-    "type": "Weapon",
+    "type": "Utility",
     "description": "A weapon that hurls stones from a small pouch strung between leather cords. Simple in design, yet difficult to master without skill.",
     "gear_score": 65,
     "vendor_price": 19
@@ -15522,10 +15802,18 @@
   "Sling_7001": {
     "name": "Sling",
     "rarity": "Unique",
-    "type": "Weapon",
+    "type": "Utility",
     "description": "A weapon that hurls stones from a small pouch strung between leather cords. Simple in design, yet difficult to master without skill.",
     "gear_score": 90,
     "vendor_price": 31
+  },
+  "SmallFiendlingHorn": {
+    "name": "Small Fiendling Horn",
+    "rarity": "Common",
+    "type": "Misc",
+    "description": "A small horn shed from the head of a Fiendling. It is said that the size of the horn is proportional to the strength the demon once possessed.",
+    "gear_score": null,
+    "vendor_price": 23
   },
   "SmellyVomit": {
     "name": "Smelly Vomit",
@@ -15557,7 +15845,7 @@
     "type": "Misc",
     "description": "A dwarf’s beard, dirtied and tangled with soot. Wire-stiff to the touch with a heavy smell of metal clinging to it.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 25
   },
   "SoulHeart": {
     "name": "Soul Heart",
@@ -16445,7 +16733,7 @@
     "type": "Misc",
     "description": "It is a sticky saliva that gives off a strong sulfurous odor. Highly flammable, it can easily catch fire and should be handled with care.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 52
   },
   "SunburstOrb_1001": {
     "name": "Sunburst Orb",
@@ -16773,7 +17061,7 @@
     "type": "Misc",
     "description": "A gemstone formed when the hottest magma that once drove the colossus’s heart crystallized. It holds pure fire energy.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 500
   },
   "Telescope": {
     "name": "Telescope",
@@ -17343,6 +17631,14 @@
     "gear_score": null,
     "vendor_price": 20
   },
+  "TornWingFragment": {
+    "name": "Torn Wing Fragment",
+    "rarity": "Epic",
+    "type": "Misc",
+    "description": "A fragment torn from the wing of a Demon Overseer. Once vast enough to blot out a battlefield, nothing remains now but a shredded remnant.",
+    "gear_score": null,
+    "vendor_price": 321
+  },
   "TracingWheel": {
     "name": "Tracing Wheel",
     "rarity": "Rare",
@@ -17646,6 +17942,14 @@
     "description": "A small branch with decent length and flexibility.",
     "gear_score": null,
     "vendor_price": 15
+  },
+  "TwistedAbyssHorn": {
+    "name": "Twisted Abyss Horn",
+    "rarity": "Epic",
+    "type": "Misc",
+    "description": "A massive horn that erupted from the skull of a Demon Executioner. Fed on countless deaths, it grew into a grotesque twisted shape from the many forces tangled within.",
+    "gear_score": null,
+    "vendor_price": 112
   },
   "ValentineCandies": {
     "name": "Heart Candy",
@@ -18001,7 +18305,7 @@
   },
   "VoidBlade_5001": {
     "name": "Void Blade",
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "type": "Weapon",
     "description": "Crafted of dark matter and ironstone, a blade beyond earthly limitations.",
     "gear_score": 50,
@@ -18357,7 +18661,7 @@
     "type": "Misc",
     "description": "A massive chain link once forged by the ancient dwarves to bind the colossus. After the seal was broken, it was grotesquely warped by the colossus’s wrath.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 350
   },
   "WatchmanCloak_1001": {
     "name": "Watchman Cloak",
@@ -18448,10 +18752,10 @@
     "vendor_price": 100
   },
   "WhiteSash_1001": {
-    "name": "White Sash",
+    "name": "Sash",
     "rarity": "Poor",
     "type": "Armor",
-    "description": "A pristine white sash, radiating an air of elegance and purity.",
+    "description": "A simple shoulder sash made of sturdy cloth.",
     "gear_score": null,
     "vendor_price": 5
   },
@@ -18957,7 +19261,7 @@
     "type": "Misc",
     "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopRemnant_2001": {
     "name": "Remnants",
@@ -18965,7 +19269,7 @@
     "type": "Misc",
     "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopRemnant_3001": {
     "name": "Remnants",
@@ -18973,7 +19277,7 @@
     "type": "Misc",
     "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopRemnant_4001": {
     "name": "Remnants",
@@ -18981,7 +19285,7 @@
     "type": "Misc",
     "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopRemnant_5001": {
     "name": "Remnants",
@@ -18989,7 +19293,7 @@
     "type": "Misc",
     "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopRemnant_6001": {
     "name": "Remnants",
@@ -18997,7 +19301,7 @@
     "type": "Misc",
     "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopRemnant_7001": {
     "name": "Remnants",
@@ -19005,7 +19309,7 @@
     "type": "Misc",
     "description": "These are small pieces of leather and fabric left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopScraps_1001": {
     "name": "Scraps",
@@ -19013,7 +19317,7 @@
     "type": "Misc",
     "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopScraps_2001": {
     "name": "Scraps",
@@ -19021,7 +19325,7 @@
     "type": "Misc",
     "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopScraps_3001": {
     "name": "Scraps",
@@ -19029,7 +19333,7 @@
     "type": "Misc",
     "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopScraps_4001": {
     "name": "Scraps",
@@ -19037,7 +19341,7 @@
     "type": "Misc",
     "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopScraps_5001": {
     "name": "Scraps",
@@ -19045,7 +19349,7 @@
     "type": "Misc",
     "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopScraps_6001": {
     "name": "Scraps",
@@ -19053,7 +19357,7 @@
     "type": "Misc",
     "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WorkshopScraps_7001": {
     "name": "Scraps",
@@ -19061,7 +19365,7 @@
     "type": "Misc",
     "description": "These are small metal fragments left behind during the equipment dismantling process. They are used in crafting new equipment.",
     "gear_score": null,
-    "vendor_price": null
+    "vendor_price": 0
   },
   "WovenRattanBottle": {
     "name": "Woven Rattan Bottle",
