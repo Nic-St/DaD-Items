@@ -1,7 +1,7 @@
 {
-  "scraped_at": "2026-07-08T05:19:36.396Z",
-  "total_items": 2433,
-  "total_pages": 98,
+  "scraped_at": "2026-07-09T06:01:02.140Z",
+  "total_items": 0,
+  "total_pages": 0,
   "api_endpoint": "https://api.darkerdb.com/v1/items",
   "api_version": "1.0.7"
 }
